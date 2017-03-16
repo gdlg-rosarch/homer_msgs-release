@@ -1,0 +1,39 @@
+###################################################
+#
+# The action expresses what the receiving node should do with the service request. 
+# * CAPTURE_IMAGE instructs the node to capture an image from a sensor.
+# * LOAD_IMAGE_FROM_FILE instructs the node to load an image from the hard drive.
+###################################################
+
+uint8 CAPTURE_IMAGE=0
+uint8 LOAD_IMAGE_FROM_FILE=1
+uint8 action
+
+###################################################
+# The file path from where an image is loaded. To 
+# load an image action must be set to LOAD_IMAGE_FROM_FILE
+###################################################
+string path
+
+###################################################
+# Some additional information for the receiving node.
+# TODO check if info is used, if not remove
+###################################################
+string info
+---
+###################################################
+# The response image for the request.
+###################################################
+sensor_msgs/Image image
+
+###################################################
+# Additional information to the response.
+# TODO check if info is used, if not remove
+###################################################
+string info1
+
+###################################################
+# Additional information to the response.
+# TODO check if info is used, if not remove
+###################################################
+string info2

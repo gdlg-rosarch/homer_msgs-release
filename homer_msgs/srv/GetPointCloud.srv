@@ -1,0 +1,18 @@
+######################################################
+# The action expresses what the receiving node should do with the service request. 
+# * `CAPTURE_POINT_CLOUD` instructs the node to capture an image from a sensor.
+# * `LOAD_POINT_CLOUD_FROM_FILE` instructs the node to load a point cloud from the hard drive.
+######################################################
+uint8 CAPTURE_POINT_CLOUD=0
+uint8 LOAD_POINT_CLOUD_FROM_FILE=1
+uint8 action
+
+######################################################
+#  The file path from where an image is loaded. To load an image action must be set to LOAD_POINT_CLOUD_FROM_FILE.
+######################################################
+string path
+---
+######################################################
+# The response point cloud for the request.
+######################################################
+sensor_msgs/PointCloud2 pointCloud
