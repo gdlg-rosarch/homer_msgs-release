@@ -1,3 +1,4 @@
+release_repo_url: git@gitlab.uni-koblenz.de:robbie/homer_msgs-release.git
 tracks:
   kinetic:
     actions:
